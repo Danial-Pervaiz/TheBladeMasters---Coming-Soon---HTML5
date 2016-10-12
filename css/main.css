@@ -1,0 +1,695 @@
+/* CSS Structure
+ *
+ * 1) Body
+ *
+ * 2) Hero
+ *
+ * 3) About
+ *
+ * 4) Subscribe
+ *
+ */
+/*Body*/
+html,
+body {
+  padding: 0;
+  margin: 0;
+  overflow-x: hidden;
+  background: #000;
+}
+
+.particles {
+  position: fixed;
+  top: 0;
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+}
+/*Hero*/
+.hero {
+  position: absolute;
+  min-height: 100vh;
+  top: 0;
+  width: 100%;
+  right: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.hero.shade:after {
+  background: rgba(0, 0, 0, 0.9);
+}
+
+.hero:after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  -webkit-transition: background .5s;
+  transition: background .5s;
+}
+
+.hero .description {
+  z-index: 1;
+  padding: 50px 0;
+  text-align: center;
+  width: 100%;
+}
+
+.hero .description .logo {
+  margin: 0;
+  text-transform: uppercase;
+  font-family: Share Tech Mono;
+  font-weight: 100;
+  font-size: 72px;
+  letter-spacing: .5em;
+  color: white;
+  margin-bottom: .3em;
+  padding: 0 0 0 .5em;
+}
+
+@media (max-width: 1023px) {
+  .hero .description .logo {
+    font-size: 52px;
+  }
+}
+
+@media (max-width: 719px) {
+  .hero .description .logo {
+    font-size: 30px;
+  }
+}
+
+.hero .description .short-info {
+  color: white;
+  font-family: Space Mono;
+  letter-spacing: .3em;
+  font-size: 12px;
+  line-height: 2.5em;
+  max-width: 650px;
+  padding: 0 0 0 .3em;
+  margin: auto;
+}
+
+@media (max-width: 1023px) {
+  .hero .description .short-info {
+    font-size: 10px;
+    letter-spacing: .15em;
+  }
+}
+
+@media (max-width: 719px) {
+  .hero .description .short-info {
+    line-height: 1.5ems;
+    padding: 0 20px;
+  }
+}
+
+.count-box {
+  display: inline-block;
+}
+
+.count-box .countdown-num {
+  color: white;
+  margin: 67px 50px;
+  width: 120px;
+  height: 120px;
+  position: relative;
+  line-height: 120px;
+  font-size: 32px;
+  font-family: Space Mono;
+  letter-spacing: .15em;
+}
+
+@media (max-width: 1023px) {
+  .count-box .countdown-num {
+    width: 80px;
+    height: 80px;
+    line-height: 80px;
+    font-size: 22px;
+    margin: 30px;
+  }
+}
+
+.count-box .countdown-num:before {
+  background: rgba(0, 0, 0, 0.2);
+  content: '';
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  width: 110px;
+  height: 110px;
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+  border: 1px solid white;
+  z-index: -1;
+}
+
+@media (max-width: 1023px) {
+  .count-box .countdown-num:before {
+    width: 70px;
+    height: 70px;
+  }
+}
+
+.count-box .countdown-num:after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 120px;
+  height: 120px;
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+  border: 1px solid white;
+}
+
+@media (max-width: 1023px) {
+  .count-box .countdown-num:after {
+    width: 80px;
+    height: 80px;
+  }
+}
+
+.count-box h4 {
+  color: white;
+  text-transform: uppercase;
+  font-family: Share Tech Mono;
+  font-size: 12px;
+  letter-spacing: .2em;
+}
+
+@media (max-width: 1023px) {
+  .count-box h4 {
+    font-size: 10px;
+  }
+}
+
+.buttons {
+  margin-top: 32px;
+}
+
+@media (max-width: 1023px) {
+  .buttons {
+    margin-top: 30px;
+  }
+}
+
+.buttons .border {
+  background: #212121;
+  border: 2px solid white;
+  margin: 0 20px;
+  display: inline-block;
+  -webkit-transition: background .2s;
+  transition: background .2s;
+}
+
+.buttons .border:hover {
+  background: transparent;
+}
+
+.buttons .border:hover .button-link {
+  background: transparent;
+  color: white;
+}
+
+.buttons .border .button-link {
+  background: white;
+  border: 1px solid white;
+  display: inline-block;
+  padding: 10px 30px;
+  margin: 2px;
+  color: black;
+  text-decoration: none;
+  font-size: 10px;
+  letter-spacing: .3em;
+  cursor: pointer;
+  font-family: Share Tech Mono;
+  text-transform: uppercase;
+  -webkit-transition: color .2s, background .2s;
+  transition: color .2s, background .2s;
+}
+
+@media (max-width: 1023px) {
+  .buttons .border .button-link {
+    padding: 5px 15px;
+    font-size: 8px;
+  }
+}
+/*About*/
+.about {
+  background: #000000;
+  position: absolute;
+  top: 0;
+  right: -100vw;
+  color: #ffffff;
+  width: 50%;
+  text-align: center;
+  z-index: 2;
+  box-sizing: border-box;
+  -webkit-transition: right .3s;
+  transition: right .3s;
+  overflow: hidden;
+  height: 100%;
+}
+
+@media (max-width: 719px) {
+  .about {
+    width: 100%;
+  }
+}
+
+.about .container {
+  padding: 50px 70px;
+}
+
+@media (max-width: 1023px) {
+  .about .container {
+    padding: 10px 35px 50px;
+  }
+}
+
+@media (max-width: 719px) {
+  .about .container {
+    padding: 10px 5px 50px 30px;
+  }
+}
+
+.about.visible {
+  right: 0;
+}
+
+.about .exit {
+  width: 20px;
+  height: 20px;
+  margin: 20px;
+  position: absolute;
+  font-family: Space Mono;
+  font-size: 18px;
+  cursor: pointer;
+  float: right;
+  top: 0;
+  right: 0;
+}
+
+.about h2.logo {
+  font-family: Share Tech Mono;
+  letter-spacing: .4em;
+  text-transform: uppercase;
+  text-align: center;
+  font-size: 36px;
+  margin-bottom: 50px;
+}
+
+@media (max-width: 1023px) {
+  .about h2.logo {
+    font-size: 30px;
+  }
+}
+
+.about h2 {
+  font-family: Share Tech Mono;
+  letter-spacing: .4em;
+  text-transform: uppercase;
+  text-align: center;
+  font-size: 24px;
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+
+@media (max-width: 1023px) {
+  .about h2 {
+    font-size: 18px;
+  }
+}
+
+.about p {
+  font-family: Space Mono;
+  font-size: 12px;
+  letter-spacing: .15em;
+  line-height: 250%;
+  text-align: left;
+  margin-bottom: 20px;
+}
+
+@media (max-width: 1023px) {
+  .about p {
+    font-size: 10px;
+  }
+}
+
+.about .contact {
+  margin: auto;
+}
+
+.about .contact .name,
+.about .contact .email,
+.about .contact .message {
+  width: 100%;
+  margin: auto;
+}
+
+.about .contact .name label,
+.about .contact .email label,
+.about .contact .message label {
+  float: left;
+  margin-top: 30px;
+  text-align: left;
+  font-family: Space Mono;
+}
+.about .contact .name label {
+  margin-top: 0;
+}
+@media (max-width: 1023px) {
+  .about .contact .name label,
+  .about .contact .email label,
+  .about .contact .message label {
+    font-size: 12px;
+  }
+}
+
+.about .contact .name input,
+.about .contact .name textarea,
+.about .contact .email input,
+.about .contact .email textarea,
+.about .contact .message input,
+.about .contact .message textarea {
+  min-height: 40px;
+  margin-top: 15px;
+  width: 100%;
+  color: #ffffff;
+  display: inline-block;
+  background: #000000;
+  border: none;
+  border: 2px solid white;
+  padding: 10px;
+  resize: vertical;
+  box-sizing: border-box;
+}
+
+.about .contact .name input:focus,
+.about .contact .name textarea:focus,
+.about .contact .email input:focus,
+.about .contact .email textarea:focus,
+.about .contact .message input:focus,
+.about .contact .message textarea:focus {
+  outline: none;
+}
+
+.about .contact .submit {
+  cursor: pointer;
+  border: none;
+  background: #ffffff;
+  display: block;
+  margin: auto;
+  width: 100%;
+  height: 40px;
+  color: #000000;
+  border: 2px solid white;
+  margin-top: 30px;
+  text-transform: uppercase;
+  font-family: Space Mono;
+  font-size: 12px;
+  cursor: pointer;
+  letter-spacing: .2em;
+  -webkit-transition: color .2s, background .2s;
+  transition: color .2s, background .2s;
+}
+
+.about .contact .submit:hover {
+  background: #000000;
+  color: #ffffff;
+}
+
+.about .contact .contact-result {
+  text-align: center;
+  color: #000000;
+  -webkit-transition: color .2s;
+  transition: color .2s;
+}
+
+.about .contact .contact-result.submited {
+  color: #ffffff;
+}
+.about .info-heading {
+  margin-top: 20px;
+}
+.about .info {
+  padding: 0;
+  margin: 10px 0 0;
+}
+
+.about .info li {
+  display: inline-block;
+  min-width: 150px;
+  margin: 20px 0;
+}
+
+.about .info li .icon {
+  font-size: 32px;
+  margin-bottom: 15px;
+}
+
+.about .info li p {
+  text-align: center;
+  margin: 0;
+  line-height: 200%;
+}
+
+.about .social-links {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  text-align: center;
+  margin-top: 30px;
+}
+
+.about .social-element {
+  display: inline-block;
+  margin: 20px 10px 0;
+  position: relative;
+  width: 30px;
+  height: 30px;
+  box-sizing: border-box;
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+}
+
+.about .social-element:hover:before {
+  width: 100%;
+}
+
+.about .social-element:hover:after {
+  width: 100%;
+}
+
+.about .social-element:hover .border:before {
+  height: 100%;
+}
+
+.about .social-element:hover .border:after {
+  height: 100%;
+}
+
+.about .social-element .border {
+  position: relative;
+  width: 30px;
+  height: 30px;
+  box-sizing: border-box;
+}
+
+.about .social-element .border:before {
+  content: '';
+  position: absolute;
+  background: white;
+  height: 0%;
+  width: 2px;
+  right: 0;
+  -webkit-transition: height .4s;
+  transition: height .4s;
+}
+
+.about .social-element .border:after {
+  content: '';
+  position: absolute;
+  background: white;
+  height: 0%;
+  width: 2px;
+  left: 0;
+  bottom: 0;
+  -webkit-transition: height .4s;
+  transition: height .4s;
+}
+
+.about .social-element:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  background: white;
+  height: 2px;
+  width: 0%;
+  left: 0;
+  -webkit-transition: width .4s;
+  transition: width .4s;
+}
+
+.about .social-element:after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  background: white;
+  height: 2px;
+  width: 0%;
+  right: 0;
+  -webkit-transition: width .4s;
+  transition: width .4s;
+}
+
+.about .social-element .social-link {
+  line-height: 30px;
+  color: white;
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+}
+/*Subscribe*/
+.subscribe {
+  position: absolute;
+  top: -50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  background: #000000;
+  color: #ffffff;
+  z-index: 1;
+  max-width: 450px;
+  font-family: Space Mono;
+  text-align: center;
+  padding: 70px 20px;
+  box-sizing: border-box;
+  border: 2px solid white;
+  box-shadow: 0 0 0 5px black;
+  -webkit-transition: top .5s;
+  transition: top .5s;
+}
+
+@media (max-width: 1023px) {
+  .subscribe {
+    padding: 50px 10px;
+  }
+  .subscribe h2 {
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 719px) {
+  .subscribe {
+    width: 80vw;
+  }
+}
+
+.subscribe.visible {
+  top: 50%;
+}
+
+.subscribe .exit {
+  width: 20px;
+  height: 20px;
+  margin: 20px;
+  position: absolute;
+  font-family: Space Mono;
+  font-size: 18px;
+  cursor: pointer;
+  float: right;
+  top: 0;
+  right: 0;
+}
+
+.subscribe p {
+  font-size: 12px;
+  letter-spacing: .1em;
+  line-height: 2em;
+}
+
+@media (max-width: 1023px) {
+  .subscribe p {
+    font-size: 11px;
+  }
+}
+
+.subscribe .subscribe-form input {
+  min-height: 40px;
+  margin-top: 25px;
+  width: 80%;
+  color: #ffffff;
+  display: inline-block;
+  background: #000000;
+  border: none;
+  border: 2px solid white;
+  padding: 10px;
+  resize: vertical;
+  box-sizing: border-box;
+  text-align: center;
+}
+
+@media (max-width: 1023px) {
+  .subscribe .subscribe-form input {
+    min-height: 30px;
+    padding: 5px;
+    font-size: 11px;
+  }
+}
+
+.subscribe .subscribe-form input.submit {
+  background: #ffffff;
+  color: #000000;
+  cursor: pointer;
+  text-transform: uppercase;
+  letter-spacing: .25em;
+  font-family: Space Mono;
+  font-size: 12px;
+  -webkit-transition: color .2s, background .2s;
+  transition: color .2s, background .2s;
+}
+
+@media (max-width: 1023px) {
+  .subscribe .subscribe-form input.submit {
+    font-size: 11px;
+  }
+}
+
+.subscribe .subscribe-form input.submit:hover {
+  background: #000000;
+  color: #ffffff;
+}
+
+.subscribe .subscribe-form input:focus {
+  outline: none;
+}
+
+.subscribe .subscribe-form .subscribe-response {
+  margin: 20px 0 0 0;
+  display: block;
+  font-size: 10px;
+  padding: 0 60px;
+  line-height: 2em;
+  color: #000000;
+  -webkit-transition: color .2s;
+  transition: color .2s;
+}
+
+.subscribe .subscribe-form .subscribe-response.active {
+  color: #ffffff;
+}
