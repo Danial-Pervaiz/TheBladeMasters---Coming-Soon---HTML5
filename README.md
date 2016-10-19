@@ -18,10 +18,7 @@ Looking at my portfolio.
   JQuery
  </li>
  <li>
-  Carousels
- </li>
- <li>
-  Forms validations
+  Revolution Slider
  </li>
  <li>
   Responsive design
